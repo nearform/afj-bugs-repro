@@ -1,0 +1,25 @@
+{
+  "name": "issuer",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "ts-node src/index.ts"
+  },
+  "devDependencies": {
+    "@types/indy-sdk": "^1.16.26",
+    "@types/node": "^18.15.11",
+    "@types/qrcode-terminal": "^0.12.0",
+    "prettier": "^2.8.7",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@aries-framework/anoncreds": "^0.4.0-alpha.111",
+    "@aries-framework/core": "^0.4.0-alpha.111",
+    "@aries-framework/indy-sdk": "^0.4.0-alpha.111",
+    "@aries-framework/node": "^0.4.0-alpha.111",
+    "indy-sdk": "^1.16.0-dev-1655",
+    "qrcode-terminal": "^0.12.0"
+  }
+}
