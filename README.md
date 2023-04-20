@@ -31,7 +31,7 @@ More details in the [AriesFrameworkError: Failed to validate credential - Verifi
 - start the issuer with `yarn start`
 - copy the `INVITATION URL` link that will appear in the console
 
-#### MobileClient (Holder)
+#### MobileClient (React Native Holder)
 
 - navigate into the holder folder with `cd MobileClient`
 - install the dependencies with `yarn`
@@ -42,4 +42,5 @@ More details in the [AriesFrameworkError: Failed to validate credential - Verifi
 
 #### Notes
 
-If you are experiencing a `Timeout` error in the React Native application this is due to the Indicio Mediator URL that is not working properly, sometimes it could be down. In this case we suggest to start your own mediator using the [Aries Mediator Service](https://github.com/hyperledger/aries-mediator-service).
+- If you are experiencing a `Timeout` error in the React Native application this is due to the Indicio Mediator URL that is not working properly, sometimes it could be down. In this case we suggest to start your own mediator using the [Aries Mediator Service](https://github.com/hyperledger/aries-mediator-service).
+- The issue is not happening if the holder is a NodeJS client, the credential in this case is going to be stored properly without any errors.
