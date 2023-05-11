@@ -1,4 +1,4 @@
 export const AGENT_DEFAULT_PORT = 3001
 export const AGENT_DEFAULT_ENDPOINT =
-  'https://5ce7-194-156-227-191.ngrok-free.app'
+  'https://300bee3ac8a0.ngrok.app'
 export const AGENT_WALLET_KEY = '00000000000000000000000000000000'

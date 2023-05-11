@@ -1,0 +1,12 @@
+diff --git a/node_modules/@aries-framework/core/build/modules/vc/W3cCredentialService.js b/node_modules/@aries-framework/core/build/modules/vc/W3cCredentialService.js
+index f9c94fa..0a8ab31 100644
+--- a/node_modules/@aries-framework/core/build/modules/vc/W3cCredentialService.js
++++ b/node_modules/@aries-framework/core/build/modules/vc/W3cCredentialService.js
+@@ -101,6 +101,7 @@ let W3cCredentialService = class W3cCredentialService {
+             verifyOptions['purpose'] = options.proofPurpose;
+         }
+         const result = await vc_1.default.verifyCredential(verifyOptions);
++        console.log(JSON.stringify(result, null, 2))
+         return result;
+     }
+     /**

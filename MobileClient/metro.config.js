@@ -10,12 +10,16 @@ module.exports = {
     getTransformOptions: async () => ({
       transform: {
         experimentalImportSupport: false,
-        inlineRequires: true
-      }
-    })
+        inlineRequires: true,
+      },
+    }),
   },
   resolver: {
     // make sure this includes `cjs` (and other extensions you need)
-    sourceExts: ['js', 'json', 'ts', 'tsx', 'cjs']
-  }
-}
+    sourceExts: ['js', 'json', 'ts', 'tsx', 'cjs'],
+    extraNodeModules: {
+      stream: require.resolve('readable-stream'),
+      crypto: require.resolve('isomorphic-webcrypto'),
+    },
+  },
+};
