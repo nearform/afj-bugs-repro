@@ -1,3 +1,4 @@
+import {ensureSecure} from 'isomorphic-webcrypto';
 import {
   AnonCredsModule,
   LegacyIndyCredentialFormatService,
@@ -62,7 +63,20 @@ const indyNetworkConfig: IndySdkPoolConfig = {
   connectOnStartup: true,
 };
 
+console.log('cryptostuff', {
+  // @ts-ignore
+  none: crypto,
+  // @ts-ignore
+  global: global.crypto,
+  // @ts-ignore
+  globalWindow: global.window.crypto,
+  // @ts-ignore
+  window: window.crypto,
+});
+
 export const getAgent = async (label: string) => {
+  // Needed for isomorphic-webcrypto. Must be removed if react-native-crypto is used instead
+  await ensureSecure();
   const config: InitConfig = {
     logger: new ConsoleLogger(LogLevel.trace),
     label,

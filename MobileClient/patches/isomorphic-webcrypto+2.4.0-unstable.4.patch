@@ -1,0 +1,23 @@
+diff --git a/node_modules/isomorphic-webcrypto/src/react-native.js b/node_modules/isomorphic-webcrypto/src/react-native.js
+index a30ae52..730c6d5 100644
+--- a/node_modules/isomorphic-webcrypto/src/react-native.js
++++ b/node_modules/isomorphic-webcrypto/src/react-native.js
+@@ -3,14 +3,11 @@ let generateSecureRandom;
+ try {
+   const rn = require('react-native');
+   if (rn) {
++    // somehow expo imports, but doesn't work
+     try {
+-      generateSecureRandom = require('expo-crypto').getRandomBytesAsync;
+-    } catch (e) {
+-      try {
+-        generateSecureRandom = require(
+-            'react-native-securerandom').generateSecureRandom;
+-      } catch (e2) {
+-      }
++      generateSecureRandom = require(
++          'react-native-securerandom').generateSecureRandom;
++    } catch (e2) {
+     }
+   }
+ } catch (e) {
